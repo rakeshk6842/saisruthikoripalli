@@ -120,26 +120,6 @@ function buildResumePdf() {
     'Media Preparation, Serial Dilutions, Automated Robotic Systems, Pipetting and Calibration, Centrifugation, Sample Processing, Data Analysis, LIMS Documentation, DNA/RNA Extraction, PCR and qPCR, GMP/SOP/GDP, Troubleshooting'
   );
 
-  drawSection('Professional Experience');
-  drawRole('Laboratory Scientist | Weatherbys Scientific | Kildare, Ireland | Jan 2024 - May 2024');
-  drawBullet('Performed DNA isolation, genotyping, and PCR workflows with precision.');
-  drawBullet('Conducted sample preparation, pipetting, and calibration checks.');
-  drawBullet('Maintained compliance with GMP and QMS in daily lab activities.');
-  drawBullet('Supported troubleshooting and root cause analysis for deviations.');
-  y += 1.2;
-
-  drawRole('Laboratory Technician | Nonacus Ltd | Birmingham, UK | Apr 2021 - Apr 2022');
-  drawBullet('Conducted serial dilutions, nucleic acid extraction, and qPCR analysis.');
-  drawBullet('Managed media preparation and sample labeling/storage workflows.');
-  drawBullet('Recorded accurate, traceable data in LIMS.');
-  drawBullet('Handled automated robotic systems for high-throughput processing.');
-  y += 1.2;
-
-  drawRole('Specimen Processor | Perkin Elmer Ltd | Loughborough, UK | Dec 2020 - Mar 2021');
-  drawBullet('Operated centrifuges, robotic systems, and autoclaves at scale.');
-  drawBullet('Performed accessioning, dilution preparation, and equipment calibration.');
-  drawBullet('Maintained lab inventory and upheld safe chemical handling standards.');
-
   drawSection('Education');
   doc.setFont('times', 'bold');
   doc.setFontSize(10.8);
@@ -181,6 +161,28 @@ function buildResumePdf() {
   drawBullet('Next Generation Sequencing (NGS) - WHO (2023)');
   drawBullet('Antimicrobial Resistance and Infection Control - WHO (2023)');
   drawBullet('ICH Good Clinical Practice (E6 R2) - Global Health Network (2022)');
+
+  // Keep section heading with at least the first role line and one bullet.
+  ensureSpace(32);
+  drawSection('Professional Experience');
+  drawRole('Laboratory Scientist | Weatherbys Scientific | Kildare, Ireland | Jan 2024 - May 2024');
+  drawBullet('Performed DNA isolation, genotyping, and PCR workflows with precision.');
+  drawBullet('Conducted sample preparation, pipetting, and calibration checks.');
+  drawBullet('Maintained compliance with GMP and QMS in daily lab activities.');
+  drawBullet('Supported troubleshooting and root cause analysis for deviations.');
+  y += 1.2;
+
+  drawRole('Laboratory Technician | Nonacus Ltd | Birmingham, UK | Apr 2021 - Apr 2022');
+  drawBullet('Conducted serial dilutions, nucleic acid extraction, and qPCR analysis.');
+  drawBullet('Managed media preparation and sample labeling/storage workflows.');
+  drawBullet('Recorded accurate, traceable data in LIMS.');
+  drawBullet('Handled automated robotic systems for high-throughput processing.');
+  y += 1.2;
+
+  drawRole('Specimen Processor | Perkin Elmer Ltd | Loughborough, UK | Dec 2020 - Mar 2021');
+  drawBullet('Operated centrifuges, robotic systems, and autoclaves at scale.');
+  drawBullet('Performed accessioning, dilution preparation, and equipment calibration.');
+  drawBullet('Maintained lab inventory and upheld safe chemical handling standards.');
 
   drawSection('Interpersonal Skills');
   drawBullet('Punctuality, Honesty, Flexibility.');
@@ -277,6 +279,9 @@ function buildResumeDoc() {
       text-align: right;
       font-weight: bold;
     }
+    .page-break-before {
+      page-break-before: always;
+    }
   </style>
 </head>
 <body>
@@ -297,30 +302,6 @@ function buildResumeDoc() {
     Media Preparation, Serial Dilutions, Automated Robotic Systems, Pipetting and Calibration, Centrifugation, Sample Processing,
     Data Analysis, LIMS Documentation, DNA/RNA Extraction, PCR and qPCR, GMP/SOP/GDP, Troubleshooting
   </p>
-
-  <h2>Professional Experience</h2>
-  <p class="role">Laboratory Scientist | Weatherbys Scientific | Kildare, Ireland | Jan 2024 - May 2024</p>
-  <ul>
-    <li>Performed DNA isolation, genotyping, and PCR workflows with precision.</li>
-    <li>Conducted sample preparation, pipetting, and calibration checks.</li>
-    <li>Maintained compliance with GMP and QMS in daily lab activities.</li>
-    <li>Supported troubleshooting and root cause analysis for deviations.</li>
-  </ul>
-
-  <p class="role">Laboratory Technician | Nonacus Ltd | Birmingham, UK | Apr 2021 - Apr 2022</p>
-  <ul>
-    <li>Conducted serial dilutions, nucleic acid extraction, and qPCR analysis.</li>
-    <li>Managed media preparation and sample labeling/storage workflows.</li>
-    <li>Recorded accurate, traceable data in LIMS.</li>
-    <li>Handled automated robotic systems for high-throughput processing.</li>
-  </ul>
-
-  <p class="role">Specimen Processor | Perkin Elmer Ltd | Loughborough, UK | Dec 2020 - Mar 2021</p>
-  <ul>
-    <li>Operated centrifuges, robotic systems, and autoclaves at scale.</li>
-    <li>Performed accessioning, dilution preparation, and equipment calibration.</li>
-    <li>Maintained lab inventory and upheld safe chemical handling standards.</li>
-  </ul>
 
   <h2>Education</h2>
   <div class="edu-item">
@@ -347,6 +328,30 @@ function buildResumeDoc() {
     <li>Next Generation Sequencing (NGS) - WHO (2023)</li>
     <li>Antimicrobial Resistance and Infection Control - WHO (2023)</li>
     <li>ICH Good Clinical Practice (E6 R2) - Global Health Network (2022)</li>
+  </ul>
+
+  <h2 class="page-break-before">Professional Experience</h2>
+  <p class="role">Laboratory Scientist | Weatherbys Scientific | Kildare, Ireland | Jan 2024 - May 2024</p>
+  <ul>
+    <li>Performed DNA isolation, genotyping, and PCR workflows with precision.</li>
+    <li>Conducted sample preparation, pipetting, and calibration checks.</li>
+    <li>Maintained compliance with GMP and QMS in daily lab activities.</li>
+    <li>Supported troubleshooting and root cause analysis for deviations.</li>
+  </ul>
+
+  <p class="role">Laboratory Technician | Nonacus Ltd | Birmingham, UK | Apr 2021 - Apr 2022</p>
+  <ul>
+    <li>Conducted serial dilutions, nucleic acid extraction, and qPCR analysis.</li>
+    <li>Managed media preparation and sample labeling/storage workflows.</li>
+    <li>Recorded accurate, traceable data in LIMS.</li>
+    <li>Handled automated robotic systems for high-throughput processing.</li>
+  </ul>
+
+  <p class="role">Specimen Processor | Perkin Elmer Ltd | Loughborough, UK | Dec 2020 - Mar 2021</p>
+  <ul>
+    <li>Operated centrifuges, robotic systems, and autoclaves at scale.</li>
+    <li>Performed accessioning, dilution preparation, and equipment calibration.</li>
+    <li>Maintained lab inventory and upheld safe chemical handling standards.</li>
   </ul>
 
   <h2>Interpersonal Skills</h2>
