@@ -157,6 +157,7 @@ function buildResumePdf() {
   drawTextBlock('Score: 80%', margin + 3, contentWidth - 3, lineGap);
 
   drawSection('Certifications');
+  drawBullet('Data Science Foundations using R for Biotechnologists - OmicsLogic Bioinformatics Training (Sep 2025)');
   drawBullet('Artificial Intelligence in Drug Discovery - SilicoScientia (2025)');
   drawBullet('Next Generation Sequencing (NGS) - WHO (2023)');
   drawBullet('Antimicrobial Resistance and Infection Control - WHO (2023)');
@@ -324,6 +325,7 @@ function buildResumeDoc() {
 
   <h2>Certifications</h2>
   <ul>
+    <li>Data Science Foundations using R for Biotechnologists - OmicsLogic Bioinformatics Training (Sep 2025)</li>
     <li>Artificial Intelligence in Drug Discovery - SilicoScientia (2025)</li>
     <li>Next Generation Sequencing (NGS) - WHO (2023)</li>
     <li>Antimicrobial Resistance and Infection Control - WHO (2023)</li>
